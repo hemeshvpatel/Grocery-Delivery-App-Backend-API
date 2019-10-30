@@ -1,5 +1,8 @@
 class User < ApplicationRecord
-  has_one :address
+  validates :username, :email, presence: true
+  validates :username, :email, uniqueness: true
   has_secure_password
-  validates :username, uniqueness: { case_sensitive: false }
+  has_many :orders
+  has_many :product_reviews
+  has_many :carts
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_29_191824) do
+ActiveRecord::Schema.define(version: 2019_10_29_202956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,57 @@ ActiveRecord::Schema.define(version: 2019_10_29_191824) do
     t.string "city"
     t.string "state"
     t.string "zipcode"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "drivers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.boolean "active", default: true
+    t.string "car_make"
+    t.string "car_model"
+    t.string "car_image_url"
+    t.string "license_plate"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "order_number"
     t.integer "user_id"
+    t.integer "address_id"
+    t.string "payment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "product_reviews", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "user_id"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.decimal "price", precision: 10, scale: 2
+    t.string "size"
+    t.text "description"
+    t.string "category"
+    t.string "image_url"
+    t.string "upc"
+    t.integer "retailer_id"
+    t.boolean "active", default: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "retailers", force: :cascade do |t|
+    t.string "name"
+    t.integer "address_id"
+    t.boolean "active", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -31,7 +81,6 @@ ActiveRecord::Schema.define(version: 2019_10_29_191824) do
     t.string "username"
     t.string "password_digest"
     t.string "email"
-    t.integer "address_id", default: 1
     t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
