@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#to reset heroku db use 
+#1 heroku pg:reset DATABASE_URL --confirm my_great_app
+#2 heroku run rails db:migrate
+#3 heroku run rails db:seed
+#or
+#2 heroku run rake db:setup
+
 
 #Addresses
 default_address = Address.create(street: "316 W 12th St", city: "Austin", state: "Texas", zipcode: "78701");
