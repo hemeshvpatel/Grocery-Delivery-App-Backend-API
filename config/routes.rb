@@ -6,4 +6,11 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#profile'
     end
   end
+  
+  namespace :api do
+    namespace :v1 do
+      resources :products
+    end
+  end
+
 end

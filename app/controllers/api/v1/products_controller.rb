@@ -1,11 +1,8 @@
-class ProductsController < ApplicationController
+class Api::V1::ProductsController < ApplicationController
+    skip_before_action :authorized
+
     def index
         @products = Product.all
-    end
-
-    def show
-        @product = Product.find(params[:id])
-        @review = Review.new
-        @review.product_id = @product.id
+        render json: @products.to_json()
     end
 end
