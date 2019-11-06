@@ -1,6 +1,3 @@
 class Order < ApplicationRecord
-    has_many :products
-    has_one :user
-    has_one :retailer
-    has_one :driver
+    has_many :cart_items, dependent: :destroy
 end

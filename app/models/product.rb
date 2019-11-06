@@ -1,6 +1,3 @@
 class Product < ApplicationRecord
-    belongs_to :retailer
-    has_many :orders
-    has_many :product_reviews
-    has_many :users, through: :orders
+    has_many :cart_items, dependent: :destroy
 end
