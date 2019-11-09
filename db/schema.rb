@@ -25,10 +25,9 @@ ActiveRecord::Schema.define(version: 2019_11_06_171348) do
   end
 
   create_table "cart_items", force: :cascade do |t|
-    t.integer "quantity"
+    t.integer "quantity", default: 1
     t.integer "product_id"
-    t.integer "cart_id"
-    t.integer "order_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -74,7 +73,6 @@ ActiveRecord::Schema.define(version: 2019_11_06_171348) do
     t.text "description"
     t.string "category"
     t.string "image_url"
-    t.string "upc"
     t.integer "retailer_id"
     t.boolean "active", default: true
     t.datetime "created_at", precision: 6, null: false
@@ -96,7 +94,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_171348) do
     t.string "password_digest"
     t.string "email"
     t.boolean "admin", default: false
-    t.integer "current_order"
+    t.integer "current_cart"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
