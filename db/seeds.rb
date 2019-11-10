@@ -32,9 +32,9 @@ heb = Retailer.create(name: "H-E-B", address_id: 1)
 
 #Produce
 Product.destroy_all
-granny_smith_apple = Product.create(name: "Granny Smith Apple", price: 0.88, size: ".6lb", description: "Fresh Apples picked straight from the farm", category: "Produce", image_url: "https://www.bing.com/th?id=OIP.MkI4qN3gsfOcR24dxaLMwwHaHa&w=225&h=213&c=7&o=5&dpr=1.8&pid=1.7", retailer_id: 1)
+granny_smith_apple = Product.create(name: "Granny Smith Apple", price: 0.88, size: ".6lb", description: "Fresh Apples picked straight from the farm", category: "Produce", image_url: "https://www.yatescidermill.com/wp-content/uploads/2016/08/granny-smith.png", retailer_id: 1)
 gala_apple = Product.create(name: "Gala Apple", price: 0.99, size: ".25lb", description: "Fresh Gala Apples picked from my background farm", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-banana = Product.create(name: "Banana", price: 0.99, size: ".35lb", description: "Good for potassium", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
+banana = Product.create(name: "Banana", price: 0.99, size: ".35lb", description: "Good for potassium", category: "Produce", image_url: "http://www.hangthebankers.com/wp-content/uploads/2012/08/Banana-1024x679.jpg", retailer_id: 1)
 orange = Product.create(name: "Orange", price: 0.99, size: ".55lb", description: "Making some orange juice", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
 strawberry = Product.create(name: "Strawberry", price: 0.99, size: ".15lb", description: "Cruncy Strawberries", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
 celery = Product.create(name: "Celery", price: 0.99, size: ".75lb", description: "Great with wings", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
