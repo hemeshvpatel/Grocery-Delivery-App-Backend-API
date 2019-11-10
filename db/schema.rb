@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_171348) do
+ActiveRecord::Schema.define(version: 2019_11_10_210007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,19 +20,6 @@ ActiveRecord::Schema.define(version: 2019_11_06_171348) do
     t.string "city"
     t.string "state"
     t.string "zipcode"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "cart_items", force: :cascade do |t|
-    t.integer "quantity", default: 1
-    t.integer "product_id"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "carts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -49,11 +36,18 @@ ActiveRecord::Schema.define(version: 2019_11_06_171348) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "order_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.integer "product_id"
+    t.integer "order_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "orders", force: :cascade do |t|
-    t.integer "order_number"
-    t.integer "user_id"
-    t.integer "address_id"
-    t.string "payment"
+    t.string "name"
+    t.string "email"
+    t.text "order_items"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

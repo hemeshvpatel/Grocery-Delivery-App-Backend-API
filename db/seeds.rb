@@ -32,32 +32,89 @@ heb = Retailer.create(name: "H-E-B", address_id: 1)
 
 #Produce
 Product.destroy_all
-granny_smith_apple = Product.create(name: "Granny Smith Apple", price: 0.88, size: ".6lb", description: "Fresh Apples picked straight from the farm", category: "Produce", image_url: "https://www.yatescidermill.com/wp-content/uploads/2016/08/granny-smith.png", retailer_id: 1)
-gala_apple = Product.create(name: "Gala Apple", price: 0.99, size: ".25lb", description: "Fresh Gala Apples picked from my background farm", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-banana = Product.create(name: "Banana", price: 0.99, size: ".35lb", description: "Good for potassium", category: "Produce", image_url: "http://www.hangthebankers.com/wp-content/uploads/2012/08/Banana-1024x679.jpg", retailer_id: 1)
-orange = Product.create(name: "Orange", price: 0.99, size: ".55lb", description: "Making some orange juice", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-strawberry = Product.create(name: "Strawberry", price: 0.99, size: ".15lb", description: "Cruncy Strawberries", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-celery = Product.create(name: "Celery", price: 0.99, size: ".75lb", description: "Great with wings", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-cilantro = Product.create(name: "Cilantro", price: 0.99, size: ".95lb", description: "Yucky cilantro", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-lemon = Product.create(name: "Lemon", price: 0.99, size: ".45lb", description: "Bad lemons make great lemonade", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-lime = Product.create(name: "Lime", price: 0.99, size: ".15lb", description: "Fresh limes picked from orchard", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-onion = Product.create(name: "Onion", price: 0.99, size: ".35lb", description: "Fresh onions", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-jalepeno = Product.create(name: "Jalepeno", price: 0.99, size: ".25lb", description: "Fresh jalepenos picked from my background farm", category: "Produce", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
+gala_apple = Product.create(name: "Gala Apple", price: 0.85, 
+    size: ".6lb", description: "Fresh gala apples picked straight from the 
+    farm", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-gala-apples-000375146.jpg", 
+    retailer_id: 1)
+    granny_smith_apple = Product.create(name: "Granny Smith Apple", price: 0.91, 
+    size: ".6lb", description: "Fresh granny smith apples picked straight from the 
+    farm", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-pink-lady-apples-000320625.jpg", 
+    retailer_id: 2)
+    pink_lady_apple = Product.create(name: "Pink Lady Apple", price: 1.03, 
+    size: ".55lb", description: "Fresh pink lady apples picked straight from the 
+    farm", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-pink-lady-apples-000320625.jpg", 
+    retailer_id: 3)
+    red_delicious_apple = Product.create(name: "Red Delicious Apple", price: 0.85, 
+    size: ".65lb", description: "Fresh red delicious apples picked straight from the 
+    farm", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-medium-red-delicious-apples-000325189.jpg", 
+    retailer_id: 4)
+    lime = Product.create(name: "Lime", price: 0.24, 
+    size: ".17lb", description: "Fresh limes", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-limes-000442356.jpg", 
+    retailer_id: 5)
+    lemon = Product.create(name: "Lemon", price: 0.35, 
+    size: ".2lb", description: "Fresh lemons", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-lemons-000375185.jpg", 
+    retailer_id: 6)
+    navel_orange = Product.create(name: "Navel Orange", price: 0.99, 
+    size: ".65lb", description: "Fresh navel oranges", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-extra-large-navel-oranges-000375169.jpg", 
+    retailer_id: 7)
+    grapefruit = Product.create(name: "Grapefruit", price: 0.60, 
+    size: ".6lb", description: "Fresh grapefruits", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-small-grapefruit-000320777.jpg", 
+    retailer_id: 8)
+    cantaloupe = Product.create(name: "Cantaloupe", price: 2.06, 
+    size: "3lb", description: "Fresh cantaloupe", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-cantaloupe-000325202.jpg", 
+    retailer_id: 9)
+    watermelon = Product.create(name: "Watermelon", price: 6.14, 
+    size: "21lb", description: "Fresh seedless watermelon", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-seedless-watermelon-000320934.jpg", 
+    retailer_id: 10)
+    honeydew_melon = Product.create(name: "Honeydew Melon", price: 2.75, 
+    size: "6.2lb", description: "Fresh, sweet, and juicy honeydew melon", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-nbsp-honeydew-melon-000325203.jpg", 
+    retailer_id: 11)
+    watermelon_personal_size = Product.create(name: "Watermelon, Personal Size", price: 3.09, 
+    size: "4.3lb", description: "Fresh personal sized watermelons", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-watermelon-000583329.jpg", 
+    retailer_id: 12)
+    avocado = Product.create(name: "Avocado", price: 0.71, 
+    size: "0.5lb", description: "Fresh small avocados", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-avocados-000377478.jpg", 
+    retailer_id: 13)
+    corn = Product.create(name: "Corn", price: 0.32, 
+    size: "0.3lb", description: "Fresh corn", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-corn-000374788.jpg", 
+    retailer_id: 14)
+    celery = Product.create(name: "Celery", price: 1.42, 
+    size: "0.4lb", description: "Fresh crunchy celery", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-celery-000325173.jpg", 
+    retailer_id: 15)
+    cucumber = Product.create(name: "Cucumber", price: 0.52, 
+    size: "0.3lb", description: "Fresh cucumbers", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-cucumbers-000319432.jpg", 
+    retailer_id: 16)
+    spaghetti_squash = Product.create(name: "Spaghetti Squash", price: 2.80, 
+    size: "3.5lb", description: "Fresh spaghetti squash", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-spaghetti-squash-000318864.jpg", 
+    retailer_id: 17)
+    butternut_squash = Product.create(name: "Butternut Squash", price: 2.44, 
+    size: "2.05lb", description: "Fresh butternut squash", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-butternut-squash-000318866.jpg", 
+    retailer_id: 18)
+    acorn_squash = Product.create(name: "Acorn Squash", price: 1.36, 
+    size: "1.7lb", description: "Fresh acorn squash", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-acorn-squash-000374723.jpg", 
+    retailer_id: 19)
+    zucchini_squash = Product.create(name: "Zucchini Squash", price: 0.69, 
+    size: "0.4lb", description: "Fresh zucchini squash", category: "Fruits & Vegetables", image_url: 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-organic-zucchini-squash-000320203.jpg", 
+    retailer_id: 20)
 
-granny_smith_apple2 = Product.create(name: "Frozen Granny Smith Apple", price: 0.88, size: ".6lb", description: "Fresh Granny Smith Apples picked straight from the farm", category: "Frozen", image_url: "https://www.bing.com/th?id=OIP.MkI4qN3gsfOcR24dxaLMwwHaHa&w=225&h=213&c=7&o=5&dpr=1.8&pid=1.7", retailer_id: 1)
-gala_apple2 = Product.create(name: "Frozen Gala Apple", price: 0.99, size: ".25lb", description: "Fresh Gala Apples picked from my background farm", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-banana2 = Product.create(name: "Frozen Banana", price: 0.99, size: ".35lb", description: "Good for potassium", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-orange2 = Product.create(name: "Frozen Orange", price: 0.99, size: ".55lb", description: "Making some orange juice", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-strawberry2 = Product.create(name: "Frozen Strawberry", price: 0.99, size: ".15lb", description: "Cruncy Strawberries", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-celery2 = Product.create(name: "Frozen Celery", price: 0.99, size: ".75lb", description: "Great with wings", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-cilantro2 = Product.create(name: "Frozen Cilantro", price: 0.99, size: ".95lb", description: "Yucky cilantro", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-lemon2 = Product.create(name: "Frozen Lemon", price: 0.99, size: ".45lb", description: "Bad lemons make great lemonade", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-lime2 = Product.create(name: "Frozen Lime", price: 0.99, size: ".15lb", description: "Fresh limes picked from orchard", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-onion2 = Product.create(name: "Frozen Onion", price: 0.99, size: ".35lb", description: "Fresh onions", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-jalepeno2 = Product.create(name: "Frozen Jalepeno", price: 0.99, size: ".25lb", description: "Fresh jalepenos picked from my background farm", category: "Frozen", image_url: "https://www.salisburypost.com/wp-content/uploads/2018/08/0828-Gala-Apple-622x720.jpg", retailer_id: 1)
-
-
-
-#Cart
-Cart.destroy_all
 
