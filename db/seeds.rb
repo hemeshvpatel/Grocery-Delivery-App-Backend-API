@@ -145,7 +145,7 @@ gala_apple = Product.create(name: "Gala Apple", price: 0.85,
     size: "32oz", description: "Gatorade Thirst Quencher - Cool Blue", category: "Beverages", image_url: 
     "https://images.heb.com/is/image/HEBGrocery/prd-small/gatorade-cool-blue-thirst-quencher-000532225.jpg", 
     retailer_id: 25)
-    gatorade_orange = Product.create(name: "Gatorade Orange, price: 1.03, 
+    gatorade_orange = Product.create(name: "Gatorade Orange", price: 1.03, 
     size: "32oz", description: "Gatorade Thirst Quencher - Orange", category: "Beverages", image_url: 
     "https://images.heb.com/is/image/HEBGrocery/prd-small/gatorade-orange-thirst-quencher-000149719.jpg", 
     retailer_id: 26)
