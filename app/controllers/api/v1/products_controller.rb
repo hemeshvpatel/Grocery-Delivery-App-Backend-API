@@ -8,7 +8,7 @@ class Api::V1::ProductsController < ApplicationController
 
     def show
         @product = Product.find_by(id: params[:id])
-        render json: @product, except: [:updated_at, :created_at]
+        render json: @product
     end
 
 end

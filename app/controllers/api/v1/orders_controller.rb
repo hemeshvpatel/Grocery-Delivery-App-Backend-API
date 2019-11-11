@@ -6,6 +6,7 @@ class Api::V1::OrdersController < ApplicationController
       render :json=> @orders.to_json(:include => 
         {:order_items => 
           {:include => :product}} )
+
     end
 
     def show
@@ -13,15 +14,20 @@ class Api::V1::OrdersController < ApplicationController
       render :json=> @order.to_json(:include => 
         {:order_items => 
           {:include => :product}} )
+
     end
 
     def create
       @order = Order.create(order_params)
-      render json: @order
+      
+      render :json=> @order.to_json(:include => 
+        {:order_items => 
+          {:include => :product}} )
+
     end
       
     private
       def order_params
-        params.require(:order).permit(:id,:name, :email, order_items_attributes: [:product_id, :quantity])
+        params.require(:order).permit(:name, :email, order_items_attributes: [:product_id, :quantity])
       end
 end

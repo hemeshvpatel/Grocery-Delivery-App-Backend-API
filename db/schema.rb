@@ -52,14 +52,6 @@ ActiveRecord::Schema.define(version: 2019_11_10_210007) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "product_reviews", force: :cascade do |t|
-    t.integer "product_id"
-    t.integer "user_id"
-    t.text "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.decimal "price", precision: 10, scale: 2
@@ -88,7 +80,6 @@ ActiveRecord::Schema.define(version: 2019_11_10_210007) do
     t.string "password_digest"
     t.string "email"
     t.boolean "admin", default: false
-    t.integer "current_cart"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
