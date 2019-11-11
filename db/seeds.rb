@@ -14,30 +14,10 @@
 #2 heroku run rake db:setup
 
 
-#Addresses
-Address.destroy_all
-default_address = Address.create(street: "316 W 12th St", city: "Austin", state: "Texas", zipcode: "78701");
 
 #User Accounts
 User.destroy_all
-admin = User.create(first_name: "Admin", last_name: "User", email: "admin@admin.com", username: "Admin", password: "password", admin: true);
-hi = User.create(first_name: "hi", last_name: "hi", email: "hi@hi.com", username: "hi", password: "hi", admin: true);
-
-#Retailers
-Retailer.destroy_all
-the_fresh_market = Retailer.create(name: "The Fresh Market", address_id: 1)
-heb = Retailer.create(name: "H-E-B", address_id: 1)
-
-#Drivers
-# t.string :first_name
-# t.string :last_name
-# t.boolean :active, default: true
-# t.string :car_make
-# t.string :car_model
-# t.string :car_image_url
-# t.string :license_plate
-
-
+hi = User.create(first_name: "hi", last_name: "hi", email: "hi@hi.com", username: "hi", password: "hi");
 
 #Products
 Product.destroy_all

@@ -15,27 +15,6 @@ ActiveRecord::Schema.define(version: 2019_11_10_210007) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "addresses", force: :cascade do |t|
-    t.string "street"
-    t.string "city"
-    t.string "state"
-    t.string "zipcode"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "drivers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.boolean "active", default: true
-    t.string "car_make"
-    t.string "car_model"
-    t.string "car_image_url"
-    t.string "license_plate"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "order_items", force: :cascade do |t|
     t.integer "quantity"
     t.integer "product_id"
@@ -65,21 +44,12 @@ ActiveRecord::Schema.define(version: 2019_11_10_210007) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "retailers", force: :cascade do |t|
-    t.string "name"
-    t.integer "address_id"
-    t.boolean "active", default: true
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "username"
     t.string "password_digest"
     t.string "email"
-    t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
