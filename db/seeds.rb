@@ -107,7 +107,7 @@ gala_apple = Product.create(name: "Gala Apple", price: 0.85,
     retailer_id: 15)
     cucumber = Product.create(name: "Cucumber", price: 0.52, 
     size: "0.3lb", description: "Fresh cucumbers", category: "Fruits & Vegetables", image_url: 
-    "https://ima6es.heb.com/is/image/HEBGrocery/prd-small/fresh-cucumbers-000319432.jpg", 
+    "https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-cucumbers-000319432.jpg", 
     retailer_id: 16)
     spaghetti_squash = Product.create(name: "Spaghetti Squash", price: 2.80, 
     size: "3.5lb", description: "Fresh spaghetti squash", category: "Fruits & Vegetables", image_url: 
