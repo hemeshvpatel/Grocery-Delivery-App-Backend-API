@@ -28,6 +28,6 @@ class Api::V1::OrdersController < ApplicationController
       
     private
       def order_params
-        params.require(:order).permit(:name, :email, order_items_attributes: [:product_id, :quantity])
+        params.require(:order).permit(:name, :email, :street, :city, :state, :zipcode, :deliverytime order_items_attributes: [:product_id, :quantity])
       end
 end

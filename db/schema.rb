@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 2019_11_10_210007) do
   create_table "orders", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "deliverytime"
+    t.integer "zipcode"
     t.text "order_items"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -38,7 +43,6 @@ ActiveRecord::Schema.define(version: 2019_11_10_210007) do
     t.text "description"
     t.string "category"
     t.string "image_url"
-    t.integer "retailer_id"
     t.boolean "active", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

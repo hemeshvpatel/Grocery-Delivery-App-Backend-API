@@ -7,7 +7,6 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.text :description
       t.string :category
       t.string :image_url
-      t.integer :retailer_id
       t.boolean :active, default: true
 
       t.timestamps
