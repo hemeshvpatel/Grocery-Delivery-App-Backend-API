@@ -8,6 +8,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :state
       t.string :deliverytime
       t.integer :zipcode
+      t.integer :user_id
       t.text :order_items
 
       t.timestamps

@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_11_10_210007) do
     t.string "state"
     t.string "deliverytime"
     t.integer "zipcode"
+    t.integer "user_id"
     t.text "order_items"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
